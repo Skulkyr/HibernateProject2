@@ -2,16 +2,16 @@ package entity.location;
 
 import jakarta.persistence.*;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.UpdateTimestamp;
 
-import java.sql.Timestamp;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 public class City {
     @Id
     @Column(name = "city_id")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Short id;
     @Column(length = 50, nullable = false)
     private String city;
     @ManyToOne()
@@ -19,7 +19,8 @@ public class City {
     private Country country;
 
     @Column(name = "last_update", nullable = false)
-    private Timestamp lastUpdate;
+    @UpdateTimestamp
+    private LocalDateTime lastUpdate;
 
     @Override
     public String toString() {
@@ -34,11 +35,11 @@ public class City {
     public City() {
     }
 
-    public Integer getId() {
+    public Short getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Short id) {
         this.id = id;
     }
 
@@ -58,11 +59,11 @@ public class City {
         this.country = country;
     }
 
-    public Date getLastUpdate() {
+    public LocalDateTime getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Timestamp lastUpdate) {
+    public void setLastUpdate(LocalDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 }
