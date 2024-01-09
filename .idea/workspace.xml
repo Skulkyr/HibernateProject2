@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9008c98c-e28e-4d29-b956-f58897160e02" name="Changes" comment="add field's">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/film/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/film/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/location/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/location/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/location/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/location/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/location/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/location/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/location/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/location/Language.java" afterDir="false" />
-    </list>
+    <list default="true" id="9008c98c-e28e-4d29-b956-f58897160e02" name="Changes" comment="add field's" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,6 +132,7 @@
       <workItem from="1703879125983" duration="650000" />
       <workItem from="1704016699671" duration="833000" />
       <workItem from="1704040782151" duration="6387000" />
+      <workItem from="1704796852349" duration="2685000" />
     </task>
     <task id="LOCAL-00001" summary="first changes">
       <option name="closed" value="true" />

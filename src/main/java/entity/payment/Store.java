@@ -1,7 +1,11 @@
 package entity.payment;
 
+import entity.location.Address;
 import entity.persons.Staff;
 import jakarta.persistence.*;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.LocalDateTime;
 
 @Entity
 public class Store {
@@ -9,7 +13,45 @@ public class Store {
     @Column(name = "store_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Byte id;
+    @ManyToOne
+    @JoinColumn(name = "manager_staff_id")
+    private Staff managerStaff;
+    @ManyToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
+    @UpdateTimestamp
+    @Column(name = "last_update")
+    private LocalDateTime lastUpdate;
 
-    @Column
-    private Staff staff;
+    public Byte getId() {
+        return id;
+    }
+
+    public void setId(Byte id) {
+        this.id = id;
+    }
+
+    public Staff getManagerStaff() {
+        return managerStaff;
+    }
+
+    public void setManagerStaff(Staff managerStaff) {
+        this.managerStaff = managerStaff;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public LocalDateTime getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(LocalDateTime lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
 }
