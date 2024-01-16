@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 public class Rental {
@@ -24,7 +23,7 @@ public class Rental {
     @JoinColumn(name = "customer_id")
     private Customer customer;
     @Column(name = "return_date")
-    private Date returnDate;
+    private LocalDateTime returnDate;
     @ManyToOne
     @JoinColumn(name = "staff_id")
     private Staff staff;
@@ -64,11 +63,11 @@ public class Rental {
         this.customer = customer;
     }
 
-    public Date getReturnDate() {
+    public LocalDateTime getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(Date returnDate) {
+    public void setReturnDate(LocalDateTime returnDate) {
         this.returnDate = returnDate;
     }
 

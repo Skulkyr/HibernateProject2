@@ -3,6 +3,7 @@ package entity.persons;
 import entity.location.Address;
 import entity.payment.Store;
 import jakarta.persistence.*;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -29,7 +30,7 @@ public class Customer {
     @Column(length = 45)
     private String email;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
 
@@ -115,5 +116,20 @@ public class Customer {
 
     public void setLastUpdate(LocalDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("store", store)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("email", email)
+                .append("address", address)
+                .append("active", active)
+                .append("createDate", createDate)
+                .append("lastUpdate", lastUpdate)
+                .toString();
     }
 }

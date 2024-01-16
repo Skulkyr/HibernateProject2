@@ -6,6 +6,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(schema = "movie", name = "address")
 public class Address {
 
     @Id
@@ -20,14 +21,14 @@ public class Address {
     @Column(length = 20, nullable = false)
     private String district;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "city_id")
     private City city;
 
     @Column(name = "postal_code", length = 10)
     private String postalCode;
 
-    @Column(length = 20)
+    @Column(length = 20, nullable = false)
     private String phone;
 
     @Column(name = "last_update")

@@ -3,6 +3,7 @@ package entity.payment;
 import entity.location.Address;
 import entity.persons.Staff;
 import jakarta.persistence.*;
+import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Store {
     @Id
-    @Column(name = "store_id")
+    @Column(name = "store_id", columnDefinition = "tinyint")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Byte id;
     @ManyToOne

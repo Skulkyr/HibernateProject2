@@ -1,6 +1,10 @@
 import dao.CityDao;
-import dao.CountryDao;
-import entity.film.*;
+import dao.CustomerDao;
+import dao.FilmDao;
+import entity.film.Category;
+import entity.film.Film;
+import entity.film.FilmText;
+import entity.film.Inventory;
 import entity.location.Address;
 import entity.location.City;
 import entity.location.Country;
@@ -14,11 +18,11 @@ import entity.persons.Staff;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
 import org.junit.jupiter.api.Test;
 
 
-public class CityTest {
+public class FilmTest {
+
     @Test
     public void testImport() {
         SessionFactory sessionFactory = new Configuration()
@@ -40,8 +44,7 @@ public class CityTest {
 
         try(Session session = sessionFactory.getCurrentSession()) {
             session.beginTransaction();
-            City city = new CityDao(sessionFactory).getCityByName("Moscow");
-            System.out.println(city);
+            new CustomerDao(sessionFactory).getById(609);
         } catch (Exception e) {
             System.err.println("Error with data base");
             e.printStackTrace();

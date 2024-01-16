@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9008c98c-e28e-4d29-b956-f58897160e02" name="Changes" comment="add field's" />
+    <list default="true" id="9008c98c-e28e-4d29-b956-f58897160e02" name="Changes" comment="add field's">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ActorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AddressDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CityDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CountryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FilmDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FilmTextDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/GenericDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/InventoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/LanguageDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/PaymentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/RentalDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/StaffDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/StoreDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/RattingMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/FilmStoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FilmTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/film/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/film/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/film/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/film/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/location/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/location/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/location/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/location/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/location/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/location/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/payment/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/payment/Rental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/payment/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/payment/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/persons/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/persons/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CityTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +103,14 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CityTest">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Application" />
+      <module name="HibernateProject2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HibernateProject2" />
       <option name="PACKAGE_NAME" value="" />
@@ -86,6 +124,16 @@
       <module name="HibernateProject2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CityTest" />
+      <option name="METHOD_NAME" value="testImport" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FilmTest.testImport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HibernateProject2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FilmTest" />
       <option name="METHOD_NAME" value="testImport" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -115,8 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CityTest" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.FilmTest.testImport" />
         <item itemvalue="JUnit.CityTest.testImport" />
+        <item itemvalue="JUnit.CityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -133,6 +183,11 @@
       <workItem from="1704016699671" duration="833000" />
       <workItem from="1704040782151" duration="6387000" />
       <workItem from="1704796852349" duration="2685000" />
+      <workItem from="1705072414786" duration="7191000" />
+      <workItem from="1705151137675" duration="442000" />
+      <workItem from="1705151598208" duration="20390000" />
+      <workItem from="1705257553938" duration="3992000" />
+      <workItem from="1705426708378" duration="3606000" />
     </task>
     <task id="LOCAL-00001" summary="first changes">
       <option name="closed" value="true" />
@@ -163,17 +218,6 @@
     <MESSAGE value="first changes" />
     <MESSAGE value="add field's" />
     <option name="LAST_COMMIT_MESSAGE" value="add field's" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/CityTest.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HibernateProject2$CityTest_testImport.ic" NAME="CityTest.testImport Coverage Results" MODIFIED="1703781163239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

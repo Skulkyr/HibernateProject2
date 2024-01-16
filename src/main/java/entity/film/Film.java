@@ -3,6 +3,7 @@ package entity.film;
 import entity.location.Language;
 import entity.persons.Actor;
 import jakarta.persistence.*;
+import mapper.RattingMapper;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
@@ -14,7 +15,8 @@ public class Film {
 
     @Column(name = "film_id")
     @Id()
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Short id;
 
     @Column(nullable = false, length = 128)
     private String title;
@@ -35,7 +37,7 @@ public class Film {
     private Language originalLanguage;
 
     @Column(name = "rental_duration")
-    private Byte rentalDuration;
+    private Short rentalDuration;
 
     @Column(name = "rental_rate", columnDefinition = "decimal(4,2)")
     private BigDecimal rentalRate;
@@ -45,7 +47,8 @@ public class Film {
     @Column(name = "replacement_cost", columnDefinition = "decimal(5,2)")
     private BigDecimal replacementCost;
 
-    @Enumerated(EnumType.STRING)
+    @Column(columnDefinition = "ENUM('G', 'PG', 'PG-13', 'R', 'NC-17')")
+    @Convert(converter = RattingMapper.class)
     private Rating rating;
 
     @Column(name = "special_features", columnDefinition = "SET('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes')")
@@ -107,11 +110,11 @@ public class Film {
         this.originalLanguage = originalLanguage;
     }
 
-    public Byte getRentalDuration() {
+    public Short getRentalDuration() {
         return rentalDuration;
     }
 
-    public void setRentalDuration(Byte rentalDuration) {
+    public void setRentalDuration(Short rentalDuration) {
         this.rentalDuration = rentalDuration;
     }
 
@@ -179,11 +182,11 @@ public class Film {
         this.categories = categories;
     }
 
-    public void setId(Long id) {
+    public void setId(Short id) {
         this.id = id;
     }
 
-    public Long getId() {
+    public Short getId() {
         return id;
     }
 
